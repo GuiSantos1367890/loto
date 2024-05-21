@@ -1,0 +1,25 @@
+<%- include('../partials/topo') %>
+<p>
+<form name="registo" method="post" action="processa_registo" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td><input type="text" name="nome" placeholder="nome do utilizador" required></td>
+        </tr>
+        <tr>
+            <td>username</td>
+            <td><input type="text" name="username" placeholder="username" required></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" id="password" name="password" placeholder="palavra-passe" required> <a href="#"
+                    onclick="document.getElementById('password').type='text'">mostrar</a> | <a href="#"
+                    onclick="document.getElementById('password').type='password'">ocultar</a></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="registar">&nbsp;<input type="reset" value="repor"></td>
+        </tr>
+    </table>
+</form>
+</p>
+<%- include('../partials/fundo') %>

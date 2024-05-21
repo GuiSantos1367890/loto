@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= titulo %>
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        .row {
+            margin-top: 16% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content-center">
+            <div class="col">
+                <div class="card shadow-sm p-4">
+                    <div class="card-body">
+                        <%- include('../partials/topo') %>
+
+                            <h5>Números selecionados:
+                                <% numerosSelecionados.forEach(function(numero) { %>
+                                    <% if (matchingNumbers.includes(numero)) { %>
+                                        <b>
+                                            <%= numero %>
+                                        </b>
+                                        <% } else { %>
+                                            <%= numero %>
+                                                <% } %>
+                                                    <% }); %>
+                            </h5>
+
+                            <h5>Números sorteados:
+                                <% numerosSorteados.forEach(function(numero) { %>
+                                    <% if (matchingNumbers.includes(numero)) { %>
+                                        <b>
+                                            <%= numero %>
+                                        </b>
+                                        <% } else { %>
+                                            <%= numero %>
+                                                <% } %>
+                                                    <% }); %>
+                            </h5>
+                            <br>
+                            <p>Acertas-te <%= acertos %> números!</p>
+                            <p>Ganhaste <%= feijoes %> feijões!</p>
+                            <a href="/" class="btn btn-warning w-100">Voltar a apostar!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

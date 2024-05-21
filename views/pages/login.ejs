@@ -1,0 +1,21 @@
+<%- include('../partials/topo') %>
+<p>
+<form name="login" method="get" action="processa_login">
+    <table>
+        <tr>
+            <td>username</td>
+            <td><input type="text" name="username" placeholder="nome de utilizador" required></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" id="password" name="password" placeholder="palavra-passe" required> <a href="#"
+                    onclick="document.getElementById('password').type='text'">mostrar</a> | <a href="#"
+                    onclick="document.getElementById('password').type='password'">ocultar</a></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="verificar">&nbsp;<input type="reset" value="repor"></td>
+        </tr>
+    </table>
+</form>
+</p>
+<%- include('../partials/fundo') %>
