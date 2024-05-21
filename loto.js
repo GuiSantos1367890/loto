@@ -110,7 +110,7 @@ servidor.get('/processa_registo', function (req, res) {
     html += '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">\n';
     html += '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>\n';
     html += '<style>\n';
-    html += 'body { background-color: #dee2e6;}\n';
+    html += 'body { background-color: #f6f4f4;}\n';
     html += '#processa_registo {text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}\n';
     html += '</style>\n';
     html += '</head>\n';
@@ -136,7 +136,7 @@ servidor.get('/processa_registo', function (req, res) {
             if (registos.some(user => user.username === username)) {
                 html += '<h1>Erro</h1>\n';
                 html += '<p>Este nome de utilizador já está em uso. Por favor, seleciona outro.</p>\n';
-                html += '<p><a href="/" class="btn btn-primary">Voltar</a></p>\n';
+                html += '<p><a href="/" class="btn btn-warning">Voltar</a></p>\n';
                 html += '</body>\n';
                 html += '</html>\n';
                 res.send(html);
@@ -146,7 +146,7 @@ servidor.get('/processa_registo', function (req, res) {
             console.error('Erro ao ler o arquivo de registros:', error);
             html += '<h1>Erro</h1>\n';
             html += '<p>Ocorreu um erro ao processar o seu registo. Por favor, tenta novamente mais tarde.</p>\n';
-            html += '<p><a href="/" class="btn btn-primary">Voltar</a></p>\n';
+            html += '<p><a href="/" class="btn btn-warning">Voltar</a></p>\n';
             html += '</body>\n';
             html += '</html>\n';
             res.send(html);
