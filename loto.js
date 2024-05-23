@@ -538,8 +538,8 @@ servidor.post('/processa_aposta', function (req, res) {
 
             // Consultar a tabela de prêmios para determinar quantos feijões o utilizador ganhou
             const tabelaPremios = {
-                1: 5,
-                2: 10,
+                1: 10,
+                2: 15,
                 3: 20,
                 4: 50,
                 5: 100,
